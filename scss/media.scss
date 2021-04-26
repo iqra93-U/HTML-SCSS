@@ -6,7 +6,18 @@
                 font-size: 1rem;
             }
         }
+        .sub-subject{
+            .sub-subject-para, form{
+                margin-left: 1.5rem;
+                margin-right: 1.5rem;
+            }
 
+        }
+
+        }
+        .sub-subject .sub-subject-para, .diplome .diplome-description ,form{
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
         }
 
 
@@ -75,8 +86,17 @@
             .diplome{
                 .diplome-grid{
                     grid-template-columns: repeat(1,1fr);
+                    margin-left: 3rem;
+                    margin-right: 3rem;
                 }
             }
+            .sub-subject .sub-subject-para, .diplome .diplome-description ,form{
+                    margin-left: 1.5rem;
+                    margin-right: 1.5rem;
+                }
+
+            
+          
             footer{
                 .main-footer{
                     flex-wrap: wrap;
