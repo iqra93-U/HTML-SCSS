@@ -1,0 +1,88 @@
+
+@media screen and (max-width: $break-point-md) { // 1080px
+    header{
+        .main-menu{
+            .menu {
+                font-size: 1rem;
+            }
+        }
+
+        }
+
+
+    }  
+
+@media screen and (max-width: $break-point-sm) { // 1080px
+
+            header{
+                    .main-menu{
+                    
+                        [hidden] {
+                            display: none;
+                        }
+                        .menu:not([hidden]){
+                            display: block;
+                            transform: translateX(0);
+                        }
+                       .toggle-menu{
+                           display: initial;
+                       }
+                    }
+    
+             }
+            .main{
+           
+                .main-text{
+                    .h1-like {
+                        
+                    font-size: 3rem;
+                    }
+                    .main-text-btn{
+                        margin-left:5rem;
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .latest-news{
+                .card-grid{
+                    grid-template-columns: auto;
+                }
+            }
+            .students{
+                .student-list{
+                    grid-template-columns: repeat(2 , 1fr);
+                }
+                .student-info{
+                    .student-info-name{
+                        font-size: 2.3rem;
+                    }
+
+                }
+           
+            }
+            .student-data{
+                .student-personal-info{
+                 
+                    grid-template-columns: repeat(2,1fr);
+                    gap:4rem;
+                    margin-left: 1.5rem;
+                    margin-right: 1.5rem;
+        
+                   
+                }
+            }
+       
+            .diplome{
+                .diplome-grid{
+                    grid-template-columns: repeat(1,1fr);
+                }
+            }
+            footer{
+                .main-footer{
+                    flex-wrap: wrap;
+                    margin-left: 5rem;
+                    margin-right: 5rem;
+                }
+            }
+    
+        } 

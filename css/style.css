@@ -1,0 +1,740 @@
+@charset "UTF-8";
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set root font-size @10px equivalent */
+html {
+  font-size: 0.625em;
+  /* fallback IE8+ */
+  font-size: calc( 1em * 0.625 );
+  /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+}
+
+/* Remove focus for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Set cursor pointer */
+label[for],
+button,
+input[type=submit],
+select {
+  cursor: pointer;
+}
+
+/* Remove font style on address */
+address {
+  font-style: normal;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Print external URLs */
+@media print {
+  a {
+    text-decoration: underline;
+  }
+
+  a[href]:not([href^="#"])::after {
+    content: "(" attr(href) ")";
+  }
+}
+/* Helper classes */
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* Image replacement technique 2012 H5BP  - https://css-tricks.com/the-image-replacement-museum/ */
+.ir {
+  font: 0/0 a;
+  color: transparent;
+  border: 0;
+  text-shadow: none;
+}
+
+/* raleway-regular - latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/raleway-v19-latin-regular.woff2") format("woff2"), url("../fonts/raleway-v19-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* raleway-600 - latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/raleway-v19-latin-600.woff2") format("woff2"), url("../fonts/raleway-v19-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* raleway-700 - latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/raleway-v19-latin-700.woff2") format("woff2"), url("../fonts/raleway-v19-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-regular - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/montserrat-v15-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v15-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-600 - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/montserrat-v15-latin-600.woff2") format("woff2"), url("../fonts/montserrat-v15-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-500italic - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 500;
+  src: local(""), url("../fonts/montserrat-v15-latin-500italic.woff2") format("woff2"), url("../fonts/montserrat-v15-latin-500italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/montserrat-v15-latin-700.woff2") format("woff2"), url("../fonts/montserrat-v15-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* basic layout of page */
+html {
+  min-height: 100vh;
+}
+
+body .container {
+  max-width: 126.6rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 36em) {
+  body .container {
+    max-width: 34rem;
+  }
+}
+@media screen and (max-width: 48.2em) {
+  body .container {
+    max-width: 68.8rem;
+  }
+}
+@media screen and (max-width: 61em) {
+  body .container {
+    max-width: 80.8rem;
+  }
+}
+@media screen and (max-width: 68.5em) {
+  body .container {
+    max-width: 100rem;
+  }
+}
+body h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 2.5rem;
+  font-family: "raleway", bold;
+  color: #331100;
+}
+body .card {
+  position: relative;
+  text-align: left;
+  max-width: 38rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+body .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+body .card .card-content {
+  margin-left: 1.14rem;
+  margin-right: 1rem;
+}
+body .card .card-title {
+  font-family: "raleway";
+  font-weight: SemiBold;
+  font-size: 2.5rem;
+  color: #331100;
+}
+body .card .card-title-para {
+  font-family: "Montserrat";
+  font-size: 1.25rem;
+  color: #331100;
+}
+body .card .card-link {
+  display: flex;
+  justify-content: center;
+  min-height: 3rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  font-family: "montserrat", SemiBold;
+  font-size: 1.5rem;
+  border: none;
+  background-color: #FD7E37;
+  color: #FFFFFF;
+  align-items: center;
+  text-decoration: none;
+}
+body .card .card-link:hover, body .card .card-link:focus {
+  background-color: #FFFFFF;
+  color: #FD7E37;
+}
+body .card .card-link .card-link-right-flesh {
+  margin-left: 0.8rem;
+}
+body .pagination-btn {
+  display: flex;
+  justify-content: center;
+}
+body .pagination-btn .pagination-btn-link {
+  margin-right: 3rem;
+  color: #FD7E37;
+  border-color: #FD7E37;
+  border: 1px solid #FD7E37;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  background-color: #FFFFFF;
+}
+body .pagination-btn .pagination-btn-link:hover, body .pagination-btn .pagination-btn-link:focus {
+  background-color: #FD7E37;
+  color: #FFFFFF;
+}
+
+/* header  same for all pages */
+header {
+  background-color: #FD7E37;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+header .main-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .main-menu .toggle-menu {
+  background-color: transparent;
+  padding: 1.5rem;
+  border: 0;
+  color: var(--primary-color);
+  display: none;
+}
+header .main-menu .menu {
+  display: flex;
+  position: static;
+}
+header .main-menu .logo {
+  font-size: 4.8rem;
+  font-family: "raleway", Bold;
+}
+header .main-menu .menu {
+  display: flex;
+  font-family: "Montserrat", SemiBold;
+  font-size: 1.5rem;
+}
+header .main-menu .menu .menu-list {
+  transition: 0.3s;
+  margin-right: 0.5rem;
+}
+header .main-menu .menu .menu-list .menu-link {
+  display: block;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 0.6rem 1.25rem;
+  transition: 0.3s;
+}
+header .main-menu .menu .menu-list .menu-link:hover, header .main-menu .menu .menu-list .menu-link:focus {
+  background-color: #FFFFFF;
+  color: #FD7E37;
+}
+
+/* start of main page */
+.main {
+  min-height: 44.4rem;
+  background-image: url("../images/Photo arrière-plan.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (min-resolution: 144dpi) {
+  .main {
+    background-image: url("../images/Photo arrière-plan@2x.jpg");
+  }
+}
+.main .main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 59.75rem;
+  min-height: 21.9rem;
+  background-color: rgba(0, 0, 0, 0.274);
+  color: #FFFFFF;
+}
+.main .main-text .h1-like {
+  font-family: "raleway";
+  font-style: bold;
+  font-weight: 600;
+  max-width: 56.5rem;
+  font-size: 4.5rem;
+  margin-top: 1.44rem;
+  margin-left: 1.5rem;
+  margin-bottom: 3.1rem;
+}
+.main .main-text .main-text-btn {
+  margin-top: 3.1rem;
+  margin-left: 21.1rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.87rem;
+  padding-right: 1.87rem;
+  text-decoration: none;
+  border: none;
+  background-color: #FD7E37;
+  color: #FFFFFF;
+  font-family: "Montserrat", SemiBold;
+  font-size: 2.5rem;
+}
+.main .main-text .main-text-btn:hover, .main .main-text .main-text-btn:focus {
+  color: #FD7E37;
+  background-color: #FFFFFF;
+}
+
+.latest-news .actualchild-link {
+  text-decoration: none;
+  color: #331100;
+}
+.latest-news h2 {
+  margin-bottom: 2.5rem;
+}
+.latest-news .card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 100%;
+  margin: auto;
+}
+.latest-news .card-grid .card-images {
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+.latest-news .card-grid .card-date {
+  font-family: "Montserrat";
+  font-style: regular;
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #663014;
+}
+.latest-news .card-grid .card-date .date {
+  margin-left: 0.5rem;
+}
+
+.students {
+  background-color: #FD7E37;
+  border: 1px solid #707070;
+  color: #FFFFFF;
+}
+.students .student-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.students .student-info {
+  text-align: center;
+}
+.students .student-info .stddata-link {
+  text-decoration: none;
+}
+.students .student-info .student-info-img {
+  max-width: 13.62rem;
+  min-height: 13.62rem;
+  margin-bottom: 1.25rem;
+  border-radius: 50%;
+}
+.students .student-info .student-info-name {
+  margin-bottom: 1.25rem;
+  font-family: "Montserrat", SemiBold;
+  font-size: 2.5rem;
+  color: #FFFFFF;
+}
+.students .student-info .student-info-link {
+  color: #FFFFFF;
+  margin-bottom: 2.68rem;
+  font-family: "Montserrat";
+  font-size: 1rem;
+}
+
+.diplome .diplome-description {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin: auto;
+  font-family: "raleway";
+  font-weight: SemiBold;
+  font-size: 1.5rem;
+  color: #331100;
+}
+.diplome .diplome-grid-card-list {
+  text-decoration: none;
+  color: #331100;
+}
+.diplome .diplome-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: auto;
+  margin-right: auto;
+}
+.diplome .diplome-grid .card {
+  max-width: 45rem;
+}
+.diplome .diplome-grid .card-content {
+  margin-bottom: 2.5rem;
+  color: #331100;
+}
+.diplome .diplome-grid .card-content .card-title-diplome {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+}
+.diplome .diplome-grid .card-content .card-title-diplome-para {
+  font-size: 1.25rem;
+}
+
+/* start of student page */
+.std-page .students {
+  background-color: #FFFFFF;
+}
+.std-page .students .student-info {
+  margin-bottom: 1.43rem;
+}
+.std-page .students .student-info-name {
+  color: #331100;
+  font-size: 1.5rem;
+  font-family: "Montserrat";
+  font-weight: SemiBold;
+  text-decoration: none;
+}
+.std-page .students .student-info-link {
+  color: #FD7E37;
+}
+
+/* start of contact pas */
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 9rem;
+  color: #331100;
+  font-family: "Montserrat";
+  font-size: 1.5rem;
+}
+.contact-form .contact-form-name {
+  grid-column: 1;
+  margin-right: 3.2rem;
+}
+.contact-form .contact-form-message {
+  grid-column: span 2;
+}
+.contact-form .contact-form-message .message {
+  height: 15rem;
+}
+.contact-form .send-msg {
+  margin-bottom: 2.5rem;
+  font-size: 2.4rem;
+  grid-column: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+.contact-form .send-msg button {
+  background-color: #FD7E37;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  background-color: #FD7E37;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  border-radius: 4px;
+}
+.contact-form .send-msg button:hover, .contact-form .send-msg button:focus {
+  background-color: #FFFFFF;
+  color: #FD7E37;
+}
+.contact-form .send-msg button .right-flesh {
+  margin-left: 1rem;
+}
+.contact-form label {
+  margin-top: 1.25rem;
+}
+.contact-form input {
+  resize: none;
+  line-height: 5rem;
+  width: 100%;
+  border: none;
+  margin-bottom: 5.2rem;
+  border-bottom: 1.5px solid #707070;
+}
+
+/* start of confidentiality page */
+.terms .terms-heading {
+  margin-bottom: 2.5rem;
+}
+.terms .conditions {
+  margin-left: 32rem;
+  margin-right: 32rem;
+  margin-bottom: 2.6rem;
+}
+
+/* student personal data page */
+.student-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.student-data .std-data-name {
+  margin-top: 2.5rem;
+}
+.student-data .student-data-img {
+  height: 25.25rem;
+  width: 25.25rem;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 2.5rem;
+}
+.student-data .student-personal-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8rem;
+  margin-top: 2.5rem;
+}
+.student-data .student-personal-info-list-mots {
+  grid-column: 1/-1;
+  margin-bottom: 2.5rem;
+}
+
+/* page sub actualities */
+.sub-actualities .card {
+  max-width: 52.5rem;
+  margin: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.sub-actualities .card .card-date {
+  display: flex;
+}
+
+/* start of sub Formation page */
+.sub-subject h2 {
+  color: #FFFFFF;
+}
+.sub-subject .sub-subject-heading {
+  background-image: url("../images/diplome.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-resolution: 144dpi) {
+  .sub-subject .sub-subject-heading {
+    background-image: url("../images/Photo/diplome2x.jpg");
+  }
+}
+.sub-subject .sub-subject-para {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #331100;
+}
+
+footer {
+  background-color: #FD7E37;
+  color: #FFFFFF;
+  font-family: "Montserrat";
+}
+footer .main-footer {
+  display: flex;
+  justify-content: space-between;
+}
+footer .main-footer address {
+  margin-top: 2.5rem;
+  margin-bottom: 2.25rem;
+  font-size: 1.25rem;
+}
+footer .main-footer .legal-right {
+  display: flex;
+  margin-top: 7.18rem;
+  font-size: 1rem;
+}
+footer .main-footer .legal-right .legal-right-link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+footer .main-footer .legal-right p {
+  margin-left: 1.25rem;
+}
+footer .main-footer .social-media {
+  display: flex;
+  margin-top: 6.75rem;
+  margin-bottom: 6.5rem;
+}
+footer .main-footer .social-media img {
+  padding-left: 3rem;
+}
+
+@media screen and (max-width: 68.5em) {
+  header .main-menu .menu {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 48.2em) {
+  header .main-menu [hidden] {
+    display: none;
+  }
+  header .main-menu .menu:not([hidden]) {
+    display: block;
+    transform: translateX(0);
+  }
+  header .main-menu .toggle-menu {
+    display: initial;
+  }
+
+  .main .main-text .h1-like {
+    font-size: 3rem;
+  }
+  .main .main-text .main-text-btn {
+    margin-left: 5rem;
+    font-size: 2rem;
+  }
+
+  .latest-news .card-grid {
+    grid-template-columns: auto;
+  }
+
+  .students .student-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .students .student-info .student-info-name {
+    font-size: 2.3rem;
+  }
+
+  .student-data .student-personal-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .diplome .diplome-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  footer .main-footer {
+    flex-wrap: wrap;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
