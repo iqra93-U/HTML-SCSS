@@ -204,7 +204,7 @@ body .container {
 }
 @media screen and (max-width: 36em) {
   body .container {
-    max-width: 34rem;
+    max-width: 30rem;
   }
 }
 @media screen and (max-width: 48.2em) {
@@ -232,10 +232,10 @@ body h2 {
 body .card {
   position: relative;
   text-align: left;
-  max-width: 38rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2.5rem;
+  gap: 4rem;
   background-color: #FFFFFF;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -329,7 +329,6 @@ header .main-menu .menu {
   font-size: 1.5rem;
 }
 header .main-menu .menu .menu-list {
-  transition: 0.3s;
   margin-right: 0.5rem;
 }
 header .main-menu .menu .menu-list .menu-link {
@@ -340,6 +339,10 @@ header .main-menu .menu .menu-list .menu-link {
   transition: 0.3s;
 }
 header .main-menu .menu .menu-list .menu-link:hover, header .main-menu .menu .menu-list .menu-link:focus {
+  background-color: #FFFFFF;
+  color: #FD7E37;
+}
+header .main-menu .menu .menu-list .active {
   background-color: #FFFFFF;
   color: #FD7E37;
 }
@@ -411,6 +414,9 @@ header .main-menu .menu .menu-list .menu-link:hover, header .main-menu .menu .me
   max-width: 100%;
   margin: auto;
 }
+.latest-news .card-grid .card {
+  max-width: 38rem;
+}
 .latest-news .card-grid .card-images {
   object-fit: cover;
   border-radius: 0.25rem;
@@ -479,11 +485,7 @@ header .main-menu .menu .menu-list .menu-link:hover, header .main-menu .menu .me
 .diplome .diplome-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-left: auto;
-  margin-right: auto;
-}
-.diplome .diplome-grid .card {
-  max-width: 45rem;
+  gap: 3rem;
 }
 .diplome .diplome-grid .card-content {
   margin-bottom: 2.5rem;
@@ -641,6 +643,7 @@ header .main-menu .menu .menu-list .menu-link:hover, header .main-menu .menu .me
   }
 }
 .sub-subject .sub-subject-para {
+  max-width: 52.5rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2.5rem;
@@ -687,6 +690,15 @@ footer .main-footer .social-media img {
   header .main-menu .menu {
     font-size: 1rem;
   }
+  header .sub-subject .sub-subject-para, header .sub-subject form {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .sub-subject .sub-subject-para, .diplome .diplome-description, form {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
 }
 @media screen and (max-width: 48.2em) {
   header .main-menu [hidden] {
@@ -728,6 +740,13 @@ footer .main-footer .social-media img {
 
   .diplome .diplome-grid {
     grid-template-columns: repeat(1, 1fr);
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .sub-subject .sub-subject-para, .diplome .diplome-description, form {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 
   footer .main-footer {
