@@ -132,7 +132,7 @@
         </div>
         <ul class="pagination-btn">
             <li >  <a class="pagination-btn-link  "> << </a> </li>
-            <li > <a class="pagination-btn-link " data-glide-dir="=0">1</a> </li>
+            <li > <a class="pagination-btn-link active" data-glide-dir="=0">1</a> </li>
             <li ><a class="pagination-btn-link " data-glide-dir="=1">2</a> </li>
            <li > <a class="pagination-btn-link " data-glide-dir="=2">3</a> </li>
             <li ><a class="pagination-btn-link "> >></a> </li>
@@ -163,18 +163,7 @@
             </div>
     </div>
     </footer>
-    <script>
-        // Add active class to the current button (highlight it)
-        var header = document.getElementById("mainMenu");
-        var btns = header.getElementsByClassName("menu-link");
-        for (var i = 0; i < btns.length; i++) {
-          btns[i].addEventListener("click", function() {
-          var current = document.getElementsByClassName("active");
-          current[0].className = current[0].className.replace(" active", "");
-          this.className += " active";
-          });
-        }
-        </script>
+
     <script src="javascript/script.js"></script>
     
 </body>

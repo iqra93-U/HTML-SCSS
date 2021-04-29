@@ -38,6 +38,7 @@ body{
         text-align: center;
         margin-top: 2.5rem;
         font-family: 'raleway', bold;
+        font-weight: 700;
         color:$mehroon;
     }
     .card{
@@ -59,12 +60,13 @@ body{
         }
         .card-title{
             font-family: 'raleway';
-            font-weight: SemiBold;
+            font-weight: 600;
             font-size:2.5rem;
             color:$mehroon;
         }
         .card-title-para{
             font-family: 'Montserrat';
+            font-weight: 400;
             font-size:1.25rem;
             color:$mehroon;
         }
@@ -75,13 +77,13 @@ body{
             width:100%;
             margin-top: 1.5rem;
             font-family: 'montserrat' , SemiBold;
+            font-weight: 600;
             font-size: 1.5rem;
             border: none;
             background-color: $primary-color;
             color: $white;
             align-items: center;
             text-decoration: none;
-            &:hover,
             &:focus{
                 background-color: $white;
                 color:$primary-color;
@@ -96,7 +98,7 @@ body{
     .pagination-btn{
         display: flex;
        justify-content: center;
-       
+     
         .pagination-btn-link{
         margin-right:3rem;
         color:$primary-color;
@@ -111,6 +113,10 @@ body{
         color:$white;
         }
         }
+        .active{
+            background-color: $primary-color;
+            color:$white;
+           }
     }
 }
 
@@ -142,10 +148,12 @@ header{
        .logo{
            font-size: 4.8rem;
            font-family: 'raleway' , Bold;
+           font-weight: 600;
        }
     .menu{
         display: flex;
-        font-family: 'Montserrat', SemiBold;
+        font-family: 'Montserrat';
+        font-weight: 400;
         font-size:1.5rem;
 
         .menu-list{
@@ -213,6 +221,9 @@ header{
             margin-bottom: 3.1rem;
         }
         .main-text-btn{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
             margin-top:3.1rem;
             margin-left: 21.1rem;
             padding-top:1.25rem;
@@ -223,7 +234,7 @@ header{
             border: none;
             background-color: $primary-color;
             color: $white;
-            font-family: 'Montserrat', SemiBold;
+            font-family: Montserrat, SemiBold;
             font-size: 2.5rem;
             &:hover , &:focus {
 
@@ -258,6 +269,7 @@ header{
         }
         .card-date{
             font-family: 'Montserrat';
+            font-weight: 400;
             font-style: regular;
             display: flex;
             align-items: center;
@@ -296,14 +308,16 @@ header{
             }
             .student-info-name{
                 margin-bottom:1.25rem;
-                font-family: 'Montserrat' , SemiBold;
-                font-size: 2.5rem;
+                font-family: 'Montserrat' ;
+                font-weight: 600;
+                font-size: 1.5rem;
                 color: $white;
             }
             .student-info-link{
                 color: $white;
                 margin-bottom: 2.68rem ;
                 font-family: 'Montserrat';
+                font-weight: 400;
                 font-size: 1rem;
 
             }
@@ -314,9 +328,10 @@ header{
     .diplome-description{
         margin-top: 2.5rem;
         margin-bottom: 2.5rem;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
         font-family: 'raleway';
-        font-weight: SemiBold;
+        font-weight: 600;
         font-size: 1.5rem;
         
         color:$mehroon;
@@ -339,6 +354,8 @@ header{
                 font-size: 1.5rem;
             }
             .card-title-diplome-para{
+                font-family: 'Montserrat';
+                font-weight: 400;
 
                 font-size: 1.25rem;
 
@@ -360,9 +377,7 @@ header{
 
     .student-info-name{
         color:$mehroon;
-        font-size: 1.5rem;
-        font-family: 'Montserrat';
-        font-weight: SemiBold;
+      
         text-decoration: none;
     }
     .student-info-link{
@@ -373,7 +388,7 @@ header{
     }
 }
 
-/* start of contact pas */
+/* start of contact page */
 
 .contact-form{
     display: grid;
@@ -381,10 +396,19 @@ header{
     margin-top:9rem;
     color:$mehroon;
     font-family: 'Montserrat';
+    font-weight: 400;
     font-size: 1.5rem;
+    ::placeholder{
+        font-size: 1.25rem;
+        font-family:'Montserrat';
+        font-style: italic;
+        font-weight: 400;
+
+    }
    .contact-form-name{
        grid-column: 1;
        margin-right: 3.2rem;
+     
    }
    .contact-form-message{
        
@@ -394,8 +418,10 @@ header{
        }
    }
    .send-msg{
-    margin-bottom:2.5rem;   
-    font-size: 2.4rem;
+    margin-bottom:3.8rem;  
+    font-family: 'Montserrat';
+    font-weight: 600; 
+    font-size: 1.5rem;
     grid-column: 2;
     display: flex;
     justify-content: flex-end;
@@ -444,6 +470,7 @@ header{
     }
     .conditions{
         font-family: 'Montserrat';
+        font-weight: 400;
         font-size: 1.45rem;
         max-width: 52.5rem;
         margin-left: auto;
@@ -475,6 +502,16 @@ header{
         grid-template-columns: repeat(4,1fr);
         gap:8rem;
         margin-top: 2.5rem;
+        .list-head{
+            font-size: 1.5rem;
+            font-family: 'Raleway';
+            font-weight: 600;
+        }
+        .list-para{
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 1.25rem;
+        }
       
     }
     .student-personal-info-list-mots{
@@ -491,8 +528,31 @@ header{
         margin: auto;
         margin-top: 2.5rem;
         margin-bottom: 2.5rem;
+        .card-title{
+            font-size: 3rem;
+            font-family: 'Raleway';
+            font-weight: 600;
+        }
         .card-date{
             display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2.5rem;
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 1rem;
+            color: $date;
+            .date{
+                margin-left: 0.5rem;
+            }
+        }
+        .sub-actualities-detail{
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            color:$mehroon;
+            
         }
     }
 }
@@ -518,13 +578,13 @@ header{
        }
        .sub-subject-para{
         font-family: 'raleway';
-        font-weight: bold;
+        font-weight: 600;
         font-size: 1.5rem;
         max-width:52.5rem;
         margin-left:auto ;
         margin-right: auto;
-        margin-top: 3.2rem;
-        margin-bottom: 3.2rem;
+        margin-top: 4.4rem;
+        margin-bottom: 4.4rem;
         color:$mehroon;
     }
     }
@@ -534,13 +594,14 @@ footer{
     background-color: $primary-color; 
     color: $white;
     font-family: 'Montserrat';
+    font-weight: 600;
     .main-footer{
         display: flex;
         justify-content: space-between;
         address{
             margin-top: 2.5rem;
             margin-bottom: 2.25rem;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
         }
         .legal-right{
             display: flex;

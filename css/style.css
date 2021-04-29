@@ -227,6 +227,7 @@ body h2 {
   text-align: center;
   margin-top: 2.5rem;
   font-family: "raleway", bold;
+  font-weight: 700;
   color: #331100;
 }
 body .card {
@@ -249,12 +250,13 @@ body .card .card-content {
 }
 body .card .card-title {
   font-family: "raleway";
-  font-weight: SemiBold;
+  font-weight: 600;
   font-size: 2.5rem;
   color: #331100;
 }
 body .card .card-title-para {
   font-family: "Montserrat";
+  font-weight: 400;
   font-size: 1.25rem;
   color: #331100;
 }
@@ -265,6 +267,7 @@ body .card .card-link {
   width: 100%;
   margin-top: 1.5rem;
   font-family: "montserrat", SemiBold;
+  font-weight: 600;
   font-size: 1.5rem;
   border: none;
   background-color: #FD7E37;
@@ -272,7 +275,7 @@ body .card .card-link {
   align-items: center;
   text-decoration: none;
 }
-body .card .card-link:hover, body .card .card-link:focus {
+body .card .card-link:focus {
   background-color: #FFFFFF;
   color: #FD7E37;
 }
@@ -293,6 +296,10 @@ body .pagination-btn .pagination-btn-link {
   background-color: #FFFFFF;
 }
 body .pagination-btn .pagination-btn-link:hover, body .pagination-btn .pagination-btn-link:focus {
+  background-color: #FD7E37;
+  color: #FFFFFF;
+}
+body .pagination-btn .active {
   background-color: #FD7E37;
   color: #FFFFFF;
 }
@@ -322,10 +329,12 @@ header .main-menu .menu {
 header .main-menu .logo {
   font-size: 4.8rem;
   font-family: "raleway", Bold;
+  font-weight: 600;
 }
 header .main-menu .menu {
   display: flex;
-  font-family: "Montserrat", SemiBold;
+  font-family: "Montserrat";
+  font-weight: 400;
   font-size: 1.5rem;
 }
 header .main-menu .menu .menu-list {
@@ -382,6 +391,9 @@ header .main-menu .menu .menu-list .active {
   margin-bottom: 3.1rem;
 }
 .main .main-text .main-text-btn {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
   margin-top: 3.1rem;
   margin-left: 21.1rem;
   padding-top: 1.25rem;
@@ -392,7 +404,7 @@ header .main-menu .menu .menu-list .active {
   border: none;
   background-color: #FD7E37;
   color: #FFFFFF;
-  font-family: "Montserrat", SemiBold;
+  font-family: Montserrat, SemiBold;
   font-size: 2.5rem;
 }
 .main .main-text .main-text-btn:hover, .main .main-text .main-text-btn:focus {
@@ -423,6 +435,7 @@ header .main-menu .menu .menu-list .active {
 }
 .latest-news .card-grid .card-date {
   font-family: "Montserrat";
+  font-weight: 400;
   font-style: regular;
   display: flex;
   align-items: center;
@@ -458,23 +471,26 @@ header .main-menu .menu .menu-list .active {
 }
 .students .student-info .student-info-name {
   margin-bottom: 1.25rem;
-  font-family: "Montserrat", SemiBold;
-  font-size: 2.5rem;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 1.5rem;
   color: #FFFFFF;
 }
 .students .student-info .student-info-link {
   color: #FFFFFF;
   margin-bottom: 2.68rem;
   font-family: "Montserrat";
+  font-weight: 400;
   font-size: 1rem;
 }
 
 .diplome .diplome-description {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   font-family: "raleway";
-  font-weight: SemiBold;
+  font-weight: 600;
   font-size: 1.5rem;
   color: #331100;
 }
@@ -497,6 +513,8 @@ header .main-menu .menu .menu-list .active {
   font-size: 1.5rem;
 }
 .diplome .diplome-grid .card-content .card-title-diplome-para {
+  font-family: "Montserrat";
+  font-weight: 400;
   font-size: 1.25rem;
 }
 
@@ -509,23 +527,27 @@ header .main-menu .menu .menu-list .active {
 }
 .std-page .students .student-info-name {
   color: #331100;
-  font-size: 1.5rem;
-  font-family: "Montserrat";
-  font-weight: SemiBold;
   text-decoration: none;
 }
 .std-page .students .student-info-link {
   color: #FD7E37;
 }
 
-/* start of contact pas */
+/* start of contact page */
 .contact-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 9rem;
   color: #331100;
   font-family: "Montserrat";
+  font-weight: 400;
   font-size: 1.5rem;
+}
+.contact-form ::placeholder {
+  font-size: 1.25rem;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 400;
 }
 .contact-form .contact-form-name {
   grid-column: 1;
@@ -538,8 +560,10 @@ header .main-menu .menu .menu-list .active {
   height: 15rem;
 }
 .contact-form .send-msg {
-  margin-bottom: 2.5rem;
-  font-size: 2.4rem;
+  margin-bottom: 3.8rem;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 1.5rem;
   grid-column: 2;
   display: flex;
   justify-content: flex-end;
@@ -582,6 +606,7 @@ header .main-menu .menu .menu-list .active {
 }
 .terms .conditions {
   font-family: "Montserrat";
+  font-weight: 400;
   font-size: 1.45rem;
   max-width: 52.5rem;
   margin-left: auto;
@@ -612,6 +637,16 @@ header .main-menu .menu .menu-list .active {
   gap: 8rem;
   margin-top: 2.5rem;
 }
+.student-data .student-personal-info .list-head {
+  font-size: 1.5rem;
+  font-family: "Raleway";
+  font-weight: 600;
+}
+.student-data .student-personal-info .list-para {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.25rem;
+}
 .student-data .student-personal-info-list-mots {
   grid-column: 1/-1;
   margin-bottom: 2.5rem;
@@ -624,8 +659,30 @@ header .main-menu .menu .menu-list .active {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
+.sub-actualities .card .card-title {
+  font-size: 3rem;
+  font-family: "Raleway";
+  font-weight: 600;
+}
 .sub-actualities .card .card-date {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #663014;
+}
+.sub-actualities .card .card-date .date {
+  margin-left: 0.5rem;
+}
+.sub-actualities .card .sub-actualities-detail {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  color: #331100;
 }
 
 /* start of sub Formation page */
@@ -648,13 +705,13 @@ header .main-menu .menu .menu-list .active {
 }
 .sub-subject .sub-subject-para {
   font-family: "raleway";
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.5rem;
   max-width: 52.5rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3.2rem;
-  margin-bottom: 3.2rem;
+  margin-top: 4.4rem;
+  margin-bottom: 4.4rem;
   color: #331100;
 }
 
@@ -662,6 +719,7 @@ footer {
   background-color: #FD7E37;
   color: #FFFFFF;
   font-family: "Montserrat";
+  font-weight: 600;
 }
 footer .main-footer {
   display: flex;
@@ -670,7 +728,7 @@ footer .main-footer {
 footer .main-footer address {
   margin-top: 2.5rem;
   margin-bottom: 2.25rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 footer .main-footer .legal-right {
   display: flex;
