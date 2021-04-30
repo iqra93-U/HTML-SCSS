@@ -9,7 +9,7 @@ body{
         margin-left: auto;
         margin-right: auto;
     }
-    @media screen and (max-width: $break-point-xm) { //360px
+    @media screen and (max-width: $break-point-xs) { //360px
         .container {
             max-width: 30rem;
         }
@@ -120,10 +120,10 @@ body{
     }
 }
 
-
-
 /* header  same for all pages */
 header{
+    
+   
      background-color: $primary-color;
      text-transform: uppercase;
      color:$white;
@@ -183,12 +183,6 @@ header{
     } 
 }
   
-
-
-
-
-
-
 /* start of main page */
 .main{
     min-height: 44.4rem;
@@ -300,8 +294,8 @@ header{
             text-decoration: none;
         }
             .student-info-img{
-                max-width:13.62rem;
-                min-height: 13.62rem;
+                max-width:14rem;
+                min-height: 14rem;
                 margin-bottom: 1.25rem;
                 border-radius: 50%;
               
@@ -412,9 +406,9 @@ header{
    }
    .contact-form-message{
        
-       grid-column: span 2;
+       grid-column: 1/-1;
        .message{
-        height: 15rem;
+         height: 8rem;
        }
    }
    .send-msg{
@@ -455,6 +449,7 @@ header{
     input{ 
         resize: none;
         line-height: 5rem;
+        padding:1rem;
         width:100%;
         border:none;
         margin-bottom:5.2rem;
@@ -591,11 +586,20 @@ header{
 
 
 footer{  
+   [hidden]{
+    display: none !important; 
+   }
+    .mybtn{
+    visibility: hidden;
+    display: none;
+    }
     background-color: $primary-color; 
     color: $white;
     font-family: 'Montserrat';
     font-weight: 600;
     .main-footer{
+
+
         display: flex;
         justify-content: space-between;
         address{
@@ -609,7 +613,11 @@ footer{
             font-size: 1rem;
             .legal-right-link{
                 text-decoration: none;
-            color: $white;
+                color: $white;
+                &:hover,
+                &:focus{
+                    color:$mehroon;
+                }
             }
             p{
             margin-left: 1.25rem;

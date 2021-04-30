@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+       
         <div class="container">
             <div class="main-menu">
                 <p class="logo"> dwwm</p>
@@ -48,7 +48,7 @@
             <label for="message">
                 Votre message
             </label>
-            <input type="textarea" placeholder="Tapez votre message" class="message" id="message" name="message">
+            <input type="textarea" placeholder="Tapez votre message" rows="10" class="message" id="message" name="message" >
             </div>
             <div class="send-msg">
                 <button type ="button" value="send" > Envoyer
@@ -63,8 +63,10 @@
     </main>
 
     <footer>
+        <button onclick="topFunction()" class="myBtn" title="Go to top" hidden>Top</button>
         <div class="container">
             <div class="main-footer">
+                
                 <address>
                     <p>
                         Développeur Web et Web Mobile <br>

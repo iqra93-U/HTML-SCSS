@@ -464,8 +464,8 @@ header .main-menu .menu .menu-list .active {
   text-decoration: none;
 }
 .students .student-info .student-info-img {
-  max-width: 13.62rem;
-  min-height: 13.62rem;
+  max-width: 14rem;
+  min-height: 14rem;
   margin-bottom: 1.25rem;
   border-radius: 50%;
 }
@@ -554,10 +554,10 @@ header .main-menu .menu .menu-list .active {
   margin-right: 3.2rem;
 }
 .contact-form .contact-form-message {
-  grid-column: span 2;
+  grid-column: 1/-1;
 }
 .contact-form .contact-form-message .message {
-  height: 15rem;
+  height: 8rem;
 }
 .contact-form .send-msg {
   margin-bottom: 3.8rem;
@@ -594,6 +594,7 @@ header .main-menu .menu .menu-list .active {
 .contact-form input {
   resize: none;
   line-height: 5rem;
+  padding: 1rem;
   width: 100%;
   border: none;
   margin-bottom: 5.2rem;
@@ -721,6 +722,13 @@ footer {
   font-family: "Montserrat";
   font-weight: 600;
 }
+footer [hidden] {
+  display: none !important;
+}
+footer .mybtn {
+  visibility: hidden;
+  display: none;
+}
 footer .main-footer {
   display: flex;
   justify-content: space-between;
@@ -739,6 +747,9 @@ footer .main-footer .legal-right .legal-right-link {
   text-decoration: none;
   color: #FFFFFF;
 }
+footer .main-footer .legal-right .legal-right-link:hover, footer .main-footer .legal-right .legal-right-link:focus {
+  color: #331100;
+}
 footer .main-footer .legal-right p {
   margin-left: 1.25rem;
 }
@@ -756,25 +767,6 @@ footer .main-footer .social-media img {
     background-color: #FD7E37;
     text-transform: uppercase;
     color: #FFFFFF;
-  }
-  header #myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: #331100;
-    color: #FFFFFF;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
-  }
-  header #myBtn:hover {
-    background-color: #FFFFFF;
-    color: #331100;
   }
   header .main-menu .menu {
     font-size: 1rem;
@@ -816,9 +808,6 @@ footer .main-footer .social-media img {
   .students .student-list {
     grid-template-columns: repeat(2, 1fr);
   }
-  .students .student-info .student-info-name {
-    font-size: 2.3rem;
-  }
 
   .student-data .student-personal-info {
     grid-template-columns: repeat(2, 1fr);
@@ -838,10 +827,34 @@ footer .main-footer .social-media img {
     margin-right: 1.5rem;
   }
 
+  footer .myBtn {
+    display: block !important;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #331100;
+    color: #707070;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  footer .myBtn:hover {
+    background-color: #707070;
+    color: #331100;
+  }
   footer .main-footer {
     flex-wrap: wrap;
     margin-left: 5rem;
     margin-right: 5rem;
+  }
+}
+@media screen and (max-width: 36em) {
+  .students .student-list {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
