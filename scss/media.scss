@@ -8,19 +8,14 @@
                 font-size: 1rem;
             }
         }
-        .sub-subject{
-            .sub-subject-para, form{
-                margin-left: 1.5rem;
-                margin-right: 1.5rem;
-            }
+    
         }
-        }
-        .sub-subject .sub-subject-para, .diplome .diplome-description ,form{
+       .diplome .diplome-description ,form{
             margin-left: 1.5rem;
             margin-right: 1.5rem;
         }
     }  
-@media screen and (max-width: $break-point-sm) { // 1080px
+@media screen and (max-width: $break-point-sm) { 
 
             header{
                     .main-menu{

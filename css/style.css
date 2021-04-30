@@ -771,12 +771,8 @@ footer .main-footer .social-media img {
   header .main-menu .menu {
     font-size: 1rem;
   }
-  header .sub-subject .sub-subject-para, header .sub-subject form {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
 
-  .sub-subject .sub-subject-para, .diplome .diplome-description, form {
+  .diplome .diplome-description, form {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
