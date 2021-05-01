@@ -8,6 +8,14 @@ toggleMenu.addEventListener('click', function() {
 });
 
 
+// focus on contact fields 
+function setFocusToTextBox(){
+  document.querySelectorAll("input").focus();
+  InputDeviceInfo.addEventListener('click' , setFocusToTextBox);
+}
+
+
+
 //Get the button
 var mybutton = document.querySelector(".myBtn");
 

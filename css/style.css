@@ -395,6 +395,7 @@ header .main-menu .menu .menu-list .active {
   font-style: normal;
   font-weight: 600;
   margin-top: 3.1rem;
+  margin-bottom: 3.1rem;
   margin-left: 21.1rem;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -732,6 +733,9 @@ footer .mybtn {
 footer .main-footer {
   display: flex;
   justify-content: space-between;
+}
+footer .main-footer ul li {
+  list-style: none;
 }
 footer .main-footer address {
   margin-top: 2.5rem;
