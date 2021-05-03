@@ -464,6 +464,9 @@ header .main-menu .menu .menu-list .active {
 .students .student-info .stddata-link {
   text-decoration: none;
 }
+.students .student-info .stddata-link:hover {
+  color: #331100;
+}
 .students .student-info .student-info-img {
   max-width: 14rem;
   min-height: 14rem;
@@ -483,6 +486,9 @@ header .main-menu .menu .menu-list .active {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 1rem;
+}
+.students .student-info .student-info-link:hover {
+  color: #331100;
 }
 
 .diplome .diplome-description {

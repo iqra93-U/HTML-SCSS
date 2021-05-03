@@ -293,6 +293,9 @@ header{
         text-align: center;
         .stddata-link{
             text-decoration: none;
+            &:hover{
+                color:$mehroon;
+            }
         }
             .student-info-img{
                 max-width:14rem;
@@ -314,6 +317,9 @@ header{
                 font-family: 'Montserrat';
                 font-weight: 400;
                 font-size: 1rem;
+                &:hover{
+                    color:$mehroon;
+                }
 
             }
     }
