@@ -34,12 +34,17 @@ body{
     
 
     h2{
-        font-size: 3rem;
+        font-size: 4.8rem;
         text-align: center;
         margin-top: 2.5rem;
         font-family: 'raleway', bold;
         font-weight: 700;
         color:$mehroon;
+    }
+    h3{
+        font-size: 2.4rem;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem
     }
     .card{
         position:relative;
@@ -61,13 +66,13 @@ body{
         .card-title{
             font-family: 'raleway';
             font-weight: 600;
-            font-size:2.5rem;
+            font-size:2.4rem;
             color:$mehroon;
         }
         .card-title-para{
             font-family: 'Montserrat';
             font-weight: 400;
-            font-size:1.25rem;
+            font-size:2rem;
             color:$mehroon;
         }
         .card-link{
@@ -77,13 +82,14 @@ body{
             width:100%;
             margin-top: 1.5rem;
             font-family: 'montserrat' , SemiBold;
-            font-weight: 600;
-            font-size: 1.5rem;
+            font-weight: 500;
+            font-size: 2.4rem;
             border: none;
             background-color: $primary-color;
             color: $white;
             align-items: center;
             text-decoration: none;
+            &:hover,
             &:focus{
                 background-color: $white;
                 color:$primary-color;
@@ -133,6 +139,7 @@ header{
        align-items: center;
        
         .toggle-menu {
+            font-size: 3rem;
             background-color: transparent;
             padding: 1.5rem;
             border: 0;
@@ -154,7 +161,7 @@ header{
         display: flex;
         font-family: 'Montserrat';
         font-weight: 400;
-        font-size:1.5rem;
+        font-size:2rem;
 
         .menu-list{
             margin-right:0.5rem ;
@@ -200,7 +207,7 @@ header{
        display: flex;
        flex-direction: column;
        justify-content: flex-end;
-        max-width:59.75rem ;
+        max-width:93.6rem ;
         min-height: 21.9rem;
         background-color: rgba(0, 0, 0, 0.274);
         color: $white;
@@ -208,29 +215,27 @@ header{
             font-family: 'raleway';
             font-style: bold;
             font-weight: 600;
-            max-width: 56.5rem;
-            font-size: 4.5rem;
+            font-size: 7.2rem;
             margin-top: 1.44rem;
             margin-left: 1.5rem;
             margin-bottom: 3.1rem;
         }
         .main-text-btn{
+            display: block;
+            width: max-content;
             font-family: 'Montserrat';
             font-style: normal;
             font-weight: 600;
             margin-top:3.1rem;
             margin-bottom: 3.1rem;;
             margin-left: 21.1rem;
-            padding-top:1.25rem;
-            padding-bottom:1.25rem;
-            padding-left:1.87rem;
-            padding-right: 1.87rem;
+            padding: 2rem 3rem;
             text-decoration: none;
             border: none;
             background-color: $primary-color;
             color: $white;
             font-family: Montserrat, SemiBold;
-            font-size: 2.5rem;
+            font-size: 4rem;
             &:hover , &:focus {
 
                 color: $primary-color;
@@ -252,7 +257,7 @@ header{
     .card-grid{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        gap:2rem;
+        gap:3.2rem;
         max-width:100%;
         margin:auto;
         .card{
@@ -265,6 +270,7 @@ header{
         .card-date{
             font-family: 'Montserrat';
             font-weight: 400;
+            font-size: 1.6rem;
             font-style: regular;
             display: flex;
             align-items: center;
@@ -291,15 +297,18 @@ header{
     }
     .student-info{
         text-align: center;
+       
         .stddata-link{
             text-decoration: none;
+            font-size: 1.6rem;
             &:hover{
                 color:$mehroon;
             }
         }
             .student-info-img{
-                max-width:14rem;
-                min-height: 14rem;
+                width: 21.8rem;
+                height: 21.8rem;
+                margin: auto;
                 margin-bottom: 1.25rem;
                 border-radius: 50%;
               
@@ -307,8 +316,8 @@ header{
             .student-info-name{
                 margin-bottom:1.25rem;
                 font-family: 'Montserrat' ;
-                font-weight: 600;
-                font-size: 1.5rem;
+                font-weight: 500;
+                font-size: 2.4rem;
                 color: $white;
             }
             .student-info-link{
@@ -316,7 +325,7 @@ header{
                 margin-bottom: 2.68rem ;
                 font-family: 'Montserrat';
                 font-weight: 400;
-                font-size: 1rem;
+                font-size: 1.6rem;
                 &:hover{
                     color:$mehroon;
                 }
@@ -324,16 +333,17 @@ header{
             }
     }
 }
-
+// start of formation page 
 .diplome{
     .diplome-description{
+        max-width:84rem;
         margin-top: 2.5rem;
         margin-bottom: 2.5rem;
         margin-left: auto;
         margin-right: auto;
         font-family: 'raleway';
-        font-weight: 600;
-        font-size: 1.5rem;
+        font-weight: 400;
+        font-size: 2.4rem;
         
         color:$mehroon;
 
@@ -346,19 +356,21 @@ header{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap:3rem;
+        .card{
+            max-width: 55rem;
+        }
         .card-content{
             margin-bottom: 2.5rem;
             color:$mehroon;
             .card-title-diplome{
                 margin-top: 2.5rem;
                 margin-bottom: 2.5rem;
-                font-size: 1.5rem;
+                font-size: 2.4rem;
             }
             .card-title-diplome-para{
                 font-family: 'Montserrat';
                 font-weight: 400;
-
-                font-size: 1.25rem;
+                font-size: 2rem;
 
             }
 
@@ -398,9 +410,9 @@ header{
     color:$mehroon;
     font-family: 'Montserrat';
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 2rem;
     ::placeholder{
-        font-size: 1.25rem;
+        font-size: 2rem;
         font-family:'Montserrat';
         font-style: italic;
         font-weight: 400;
@@ -433,6 +445,7 @@ header{
         color:$white;
         display: flex;
         align-items: center;
+        font-size: 2.4rem;
         background-color: $primary-color;
         padding-top: 0.6rem;
         padding-bottom: 0.6rem;
@@ -492,6 +505,7 @@ header{
     justify-content: center;
     .std-data-name{
         margin-top: 2.5rem;
+       
     }
     .student-data-img{
         height:25.25rem;
@@ -505,16 +519,21 @@ header{
         grid-template-columns: repeat(4,1fr);
         gap:8rem;
         margin-top: 2.5rem;
+       
+        .student-personal-info-list{
+            line-height: 1.5;
+        }
         .list-head{
-            font-size: 1.5rem;
+            font-size: 2.4rem;
             font-family: 'Raleway';
-            font-weight: 600;
+            font-weight: 500;
         }
         .list-para{
             font-family: 'Montserrat';
             font-weight: 400;
-            font-size: 1.25rem;
+            font-size: 2rem;
         }
+       
       
     }
     .student-personal-info-list-mots{
@@ -526,13 +545,17 @@ header{
 
 /* page sub actualities */
 .sub-actualities{
-    .card{
-        max-width: 52.5rem;
+    .sub-card{
+        max-width: 84rem;
         margin: auto;
         margin-top: 2.5rem;
         margin-bottom: 2.5rem;
+        .img-std{
+            object-fit: cover;
+            width:100%
+        }
         .card-title{
-            font-size: 3rem;
+            font-size: 4.8rem;
             font-family: 'Raleway';
             font-weight: 600;
         }
@@ -543,7 +566,7 @@ header{
             margin-top: 2.5rem;
             font-family: 'Montserrat';
             font-weight: 400;
-            font-size: 1rem;
+            font-size:1.6rem;
             color: $date;
             .date{
                 margin-left: 0.5rem;
@@ -552,8 +575,9 @@ header{
         .sub-actualities-detail{
             font-family: 'Montserrat';
             font-weight: 400;
-            font-size: 1.25rem;
+            font-size: 2rem;
             margin-top: 1.5rem;
+            line-height: 1.5;
             color:$mehroon;
             
         }
@@ -570,7 +594,7 @@ header{
         background-image: url('../images/diplome.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        min-height:25rem;
+        min-height:40rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -581,9 +605,10 @@ header{
        }
        .sub-subject-para{
         font-family: 'raleway';
-        font-weight: 600;
-        font-size: 1.5rem;
-        max-width:52.5rem;
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 1.5;
+        max-width: 84rem;
         margin-left:auto ;
         margin-right: auto;
         margin-top: 4.4rem;
@@ -614,12 +639,12 @@ footer{
         address{
             margin-top: 2.5rem;
             margin-bottom: 2.25rem;
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
         .legal-right{
             display: flex;
             margin-top: 7.18rem;
-            font-size: 1rem;
+            font-size: 1.6rem;
             .legal-right-link{
                 text-decoration: none;
                 color: $white;

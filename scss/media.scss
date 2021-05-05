@@ -5,7 +5,7 @@
          color:$white;
         .main-menu{
             .menu {
-                font-size: 1rem;
+                font-size: 1.6rem;
             }
         }
     
@@ -16,7 +16,9 @@
         }
     }  
 @media screen and (max-width: $break-point-sm) { 
-
+            h2{
+                font-size: 2.5rem;
+            }
             header{
                     .main-menu{
                     
@@ -35,11 +37,11 @@
             .main{  
                 .main-text{
                     .h1-like { 
-                    font-size: 3rem;
+                    font-size: 3.5rem;
                     }
                     .main-text-btn{
                         margin-left:5rem;
-                        font-size: 2rem;
+                        font-size: 2.5rem;
                     }
                 }
             }
@@ -69,7 +71,7 @@
                     margin-right: 3rem;
                 }
             }
-            .sub-subject .sub-subject-para, .diplome .diplome-description ,form{
+            .sub-subject .sub-subject-para, .diplome .diplome-description ,.sub-actualities .sub-card,form{
                     margin-left: 1.5rem;
                     margin-right: 1.5rem;
                 }
