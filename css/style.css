@@ -207,7 +207,7 @@ body .container {
     max-width: 30rem;
   }
 }
-@media screen and (max-width: 48.2em) {
+@media screen and (max-width: 57.2em) {
   body .container {
     max-width: 68.8rem;
   }
@@ -808,7 +808,7 @@ footer .main-footer .social-media img {
     margin-right: 1.5rem;
   }
 }
-@media screen and (max-width: 48.2em) {
+@media screen and (max-width: 57.2em) {
   h2 {
     font-size: 2.5rem;
   }
