@@ -627,8 +627,9 @@ header .main-menu .menu .menu-list .active {
 .terms .conditions {
   font-family: "Montserrat";
   font-weight: 400;
-  font-size: 1.45rem;
-  max-width: 52.5rem;
+  font-size: 2rem;
+  line-height: 1.5;
+  max-width: 84rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3rem;
